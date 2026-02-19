@@ -10,7 +10,7 @@ export default function PaymentsApp() {
 
   const navigate = useNavigate();
 
-  // 🔥 LIVE RULES (needed for JSX feedback)
+  //  LIVE RULES (needed for JSX feedback)
   const hasUpper = /[A-Z]/.test(password);
   const hasLower = /[a-z]/.test(password);
   const hasDigit = /[0-9]/.test(password);
@@ -135,7 +135,6 @@ export default function PaymentsApp() {
   placeholder="Password"
   className="login-input password-input"
 />
-              {/* 🔥 LIVE FEEDBACK */}
               {!hasUpper && <div>Include Uppercase</div>}
               {!hasLower && <div>Include Lowercase</div>}
               {!hasDigit && <div>Include Number</div>}
@@ -182,3 +181,4 @@ export default function PaymentsApp() {
     </div>
   );
 }
+
