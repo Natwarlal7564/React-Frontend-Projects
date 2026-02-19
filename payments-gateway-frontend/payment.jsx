@@ -16,12 +16,12 @@ export default function PaymentsApp() {
   const [transactions, setTransactions] = useState([]);
   const [data, setData] = useState(null);
 
-  // 💳 Card states
+  // Card states
   const [cardNumber, setCardNumber] = useState("");
   const [expiry, setExpiry] = useState("");
   const [cvv, setCvv] = useState("");
 
-  // 🔁 Backend fetch
+  // Backend fetch
   const fetchBackend = async () => {
     try {
       const res = await fetch("http://localhost:3000/data");
@@ -36,7 +36,7 @@ export default function PaymentsApp() {
     fetchBackend();
   }, []);
 
-  // 💳 Handle Card Payment
+  //  Handle Card Payment
   const handleCardPayment = () => {
     if (!cardNumber || !expiry || !cvv) {
       alert("Please fill all card details");
@@ -62,7 +62,7 @@ export default function PaymentsApp() {
     setActiveTab("home");
   };
 
-  // 🏠 Home Screen
+  //  Home Screen
   const renderHome = () => (
     <div className="homeScreen">
       <div className="balanceCard">
@@ -72,7 +72,7 @@ export default function PaymentsApp() {
     </div>
   );
 
-  // 💳 Send Screen (Card UI)
+  //  Send Screen (Card UI)
   const renderSend = () => (
     <div className="sendScreen">
       <h1 className="sendTitle">Card Payment</h1>
@@ -118,7 +118,7 @@ export default function PaymentsApp() {
     </div>
   );
 
-  // 📜 History Screen
+  //  History Screen
   const renderHistory = () => (
     <div className="historyScreen">
       <h1 className="historyTitle">Transaction History</h1>
@@ -157,7 +157,7 @@ export default function PaymentsApp() {
     </div>
   );
 
-  // 👤 Profile Screen   
+  // Profile Screen   
   const renderProfile = () => (
     <div className="profileScreen">
       <div className="profileHeader">
@@ -208,3 +208,4 @@ export default function PaymentsApp() {
     </div>
   );
 }
+
