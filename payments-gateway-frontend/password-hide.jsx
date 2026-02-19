@@ -6,10 +6,10 @@ export default function HidePasswordInput({
   placeholder = "Password",
   className = ""
 }) {
-  // ✅ your state logic
+ 
   const [hidepassword, setHidepassword] = useState("Hidden");
 
-  // ✅ your if-else toggle logic
+  
   const hideit = () => {
     if (hidepassword === "Visible") {
       setHidepassword("Hidden");
@@ -46,3 +46,4 @@ export default function HidePasswordInput({
     </div>
   );
 }
+
